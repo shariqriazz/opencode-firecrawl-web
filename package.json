@@ -1,0 +1,56 @@
+{
+  "name": "opencode-firecrawl-web",
+  "version": "0.1.0",
+  "description": "Native Firecrawl tools for OpenCode 2: web search with filters, rendered page scraping, and developer index search. No skills or prompt additions.",
+  "license": "MIT",
+  "author": "Shariq Riaz",
+  "type": "module",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "firecrawl",
+    "web-search",
+    "scrape"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shariqriazz/opencode-firecrawl-web.git"
+  },
+  "homepage": "https://github.com/shariqriazz/opencode-firecrawl-web#readme",
+  "bugs": {
+    "url": "https://github.com/shariqriazz/opencode-firecrawl-web/issues"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "node --test test/*.test.ts",
+    "validate": "bun run check && bun run test",
+    "pack:inspect": "npm pack --dry-run --ignore-scripts"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": ">=2.0.29"
+  },
+  "peerDependenciesMeta": {
+    "@opencode/plugin": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.0.29",
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
